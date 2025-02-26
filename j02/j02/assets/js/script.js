@@ -1,0 +1,10 @@
+// x = 5;
+// var y = 10;
+// var y = 20;
+// let z = 20;
+// z = 30;
+// const a = "ali";
+// console.log(a);
+// console.log(z);
+// console.log(y);
+// console.log(x);
