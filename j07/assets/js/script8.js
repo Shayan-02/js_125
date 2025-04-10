@@ -10,10 +10,8 @@ function countEvenAndOddNumbers(numbers) {
             oddCount++;
         }
     });
-
-
-    alert("تعداد اعداد زوج: " + evenCount);
-    alert("تعداد اعداد فرد: " + oddCount);
+        alert("تعداد اعداد زوج: " + evenCount);
+        alert("تعداد اعداد فرد: " + oddCount);
 }
 
 
