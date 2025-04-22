@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت کلاس‌ها</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title" class="highlight">سلام دنیا!</h1>
+    <button id="addClassBtn">اضافه کردن کلاس</button>
+    <button id="removeClassBtn">حذف کلاس</button>
+    <button id="toggleClassBtn">تغییر کلاس</button>
+
+    <script>
+        const title = document.getElementById('title');
+        document.getElementById('addClassBtn').addEventListener('click', () => {
+            title.classList.add('highlight');
+        });
+        document.getElementById('removeClassBtn').addEventListener('click', () => {
+            title.classList.remove('highlight');
+        });
+        document.getElementById('toggleClassBtn').addEventListener('click', () => {
+            title.classList.toggle('highlight');
+        });
+    </script>
+</body>
+</html>

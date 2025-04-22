@@ -1,10 +1,11 @@
 // answer1
-function countLetters(word) {
-    let count = 0;
-    for (let i = 0; i < word.length; i++) {
-        count++;
+function horoofshomar(kalameh) {
+    let tedad = 0;
+    for (let i = 1; i <= kalameh.length; i++) // condition
+    {
+        tedad++; // body
     }
-    return count;
+    return tedad;
 }
 
 // answer2
