@@ -3,13 +3,6 @@ const input = document.getElementById("taskInput");
 const undoneList = document.getElementById("undoneList");
 const doneList = document.getElementById("doneList");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  const text = input.value.trim();
-  if (!text) return;
-  addTask(text, false);
-  input.value = "";
-});
 
 function addTask(text, isDone) {
   const li = document.createElement("li");
@@ -36,3 +29,10 @@ function addTask(text, isDone) {
     undoneList.appendChild(li);
   }
 }
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+      addTask(text, false);
+      input.value = "";
+    });
