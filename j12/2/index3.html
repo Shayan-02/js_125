@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>preventDefault() و stopPropagation()</title>
+  </head>
+
+  <body>
+    <form id="myForm">
+      <input type="text" id="inputField" />
+
+      <button type="submit">ارسال فرم</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("myForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        alert("فرم ارسال نشد!");
+      });
+    </script>
+  </body>
+</html>

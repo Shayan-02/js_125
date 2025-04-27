@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Mouse Events</title>
+  </head>
+
+  <body>
+    <div
+      id="box"
+      style="width: 100px; height: 100px; background-color: blue"
+    ></div>
+
+    <script>
+      const box = document.getElementById("box");
+
+      box.addEventListener("mouseover", function () {
+        box.style.backgroundColor = "yellow";
+      });
+
+      box.addEventListener("mouseout", function () {
+        box.style.backgroundColor = "blue";
+      });
+    </script>
+  </body>
+</html>
