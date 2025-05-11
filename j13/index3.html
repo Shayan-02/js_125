@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert {
+            padding: 15px;
+            border: 1px solid blue;
+            border-radius: 4px;
+            color: darkblue;
+            background-color: skyblue;
+            direction: rtl;
+        }
+    </style> 
+</head>
+<body>
+    <div class="alert" id="myDiv">
+        <strong>توجه:</strong> این یک پیام است
+    </div>
+    
+    <script>
+        let myDiv = document.querySelector("#myDiv");
+    
+        let div2 = myDiv.cloneNode(true); // clone the message
+        div2.querySelector('strong').innerHTML = 'خدانگهدار!'; // change the clone
+        myDiv.prepend(div2); // show the clone after the existing div
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .alert {
+        padding: 15px;
+        border: 1px solid blue;
+        border-radius: 4px;
+        color: darkblue;
+        background-color: skyblue;
+        direction: rtl;
+    }
+    </style> 
+</head>
+<body>
+
+<script>
+    let myDiv = document.createElement('div');
+    myDiv.className = "alert";
+    myDiv.innerHTML = "<strong>توجه:</strong> این یک پیام است.";
+
+    document.body.append(myDiv);
+</script>
+
+</body>
+</html>
