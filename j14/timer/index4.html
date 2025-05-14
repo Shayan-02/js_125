@@ -173,11 +173,11 @@
     // توقف یا از سرگیری تایمر
     function togglePauseResume() {
       if (intervalId) {
-        clearInterval(intervalId);
+        clearInterval(intervalId); // stop function
         intervalId = null;
         document.getElementById("pause-resume-btn").textContent = currentLanguage === "fa" ? "ادامه" : "Resume";
       } else if (remainingSeconds > 0) {
-        intervalId = setInterval(() => {
+        intervalId = setInterval(() => { // start function
           remainingSeconds--;
           updateDisplay(remainingSeconds);
           if (remainingSeconds <= 0) {
