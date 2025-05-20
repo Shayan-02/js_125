@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پروژه اسکرول نرم</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #333;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+
+    nav ul li {
+      margin: 0 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00ff88;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: white;
+      text-align: center;
+    }
+
+    #section1 {
+      background: #ff6b6b;
+    }
+
+    #section2 {
+      background: #4ecdc4;
+    }
+
+    #section3 {
+      background: #45b7d1;
+    }
+
+    #section4 {
+      background: #96ceb4;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#section1">بخش ۱</a></li>
+      <li><a href="#section2">بخش ۲</a></li>
+      <li><a href="#section3">بخش ۳</a></li>
+      <li><a href="#section4">بخش ۴</a></li>
+    </ul>
+  </nav>
+
+  <section id="section1">بخش اول</section>
+  <section id="section2">بخش دوم</section>
+  <section id="section3">بخش سوم</section>
+  <section id="section4">بخش چهارم</section>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+        });
+      });
+    });
+  </script>
+</body>
+</html>
